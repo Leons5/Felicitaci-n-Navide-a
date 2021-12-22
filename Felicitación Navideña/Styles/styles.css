@@ -1,0 +1,299 @@
+		/* HTML y body contenidos */
+
+html, body{
+	margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+
+    	/* CSS que permite que todo este en 1 pantalla */
+
+    display:block;
+    box-sizing: border-box;
+}
+
+		/* Borde */
+
+html {
+	border: 30px solid transparent;
+	border-image: url(../Images/Borde.jpg) 40;
+	z-index: 999999;
+}
+
+ body {
+	position: relative;
+    margin: 0;
+    padding: 0;
+	width: 100%;
+    height: 100%;
+
+	}
+
+/* Cortina Izquierda */
+
+.cortinaizq {
+	position: absolute;
+	left: 0%;
+    width: 50%;
+    height: 100%;
+    animation-name: izqfuera;
+	animation-duration: 3s;
+	animation-delay: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+	z-index: 999999;
+}
+
+@keyframes izqfuera{
+	0% {
+		top: 0px;
+		width: 50%;
+    	height: 100%;
+	}
+	100% {
+		width: 0%;
+    	height: 100%;
+	}
+}
+
+/* Cortina Derecha */
+
+.cortinadcha {
+	right: 0%;
+	position: absolute;
+    width: 50%;
+    height: 100%;
+    animation-name: dchafuera;
+	animation-duration: 3s;
+	animation-delay: 1s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards;
+	z-index: 999999;
+}
+
+@keyframes dchafuera{
+	0% {
+		top: 0px;
+		width: 50%;
+    	height: 100%;
+	}
+	100% {
+		width: 0%;
+    	height: 100%;
+	}
+}
+
+		/*Tarjeta Navideña, contenido*/
+
+		/* Fondo */
+
+body {
+	background-image: url(../Images/Fondo.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+		/* Texto */
+
+p {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	vertical-align: center;
+	width: 100%;
+	font-size: 8vw;
+	letter-spacing: 1vw;
+	font-family: Sigmar One;
+	background color: red;
+	z-index: 50;
+	color:  lightgray;
+	text-shadow: 1vw 1vw black;
+}
+
+p+p{
+	top: 75%;
+	width: 100%;
+	font-size: 4vw;
+}
+
+/* Movimiento de papa noel en pantalla */
+
+/* Papa noel inicial */
+
+#papanoeltipo1 {
+	position: absolute;
+	height: 30%;
+	left: -200%;
+	bottom: 0%;
+	z-index: 100;
+}
+
+#papanoeltipo2 {
+	position: absolute;
+	height: 30%;
+	left: 200%;
+	bottom: 50%;
+	z-index: 100;
+	transform: scaleX(-1);
+}
+
+.papanoela1 {
+	animation-name: papaa1;
+	animation-duration: 5s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+.papanoela2 {
+	animation-name: papaa2;
+	animation-duration: 5s;
+	animation-delay: 6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+.papanoela3 {
+	animation-name: papaa3;
+	animation-duration: 15s;
+	animation-delay: 7s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+.papanoela4 {
+	animation-name: papaa4;
+	animation-duration: 20s;
+	animation-delay: 15s;
+	animation-fill-mode: forwards;
+}
+
+/* Animación */
+
+@keyframes papaa1{
+	0% {
+		height: 30%;
+		left: -200%;
+		bottom: 0%;
+	}
+	100% {
+		left: 200%;
+	}
+}
+
+@keyframes papaa2{
+	0% {
+		height: 20%;
+		left: 200%;
+		bottom: 40%;
+	}
+	100% {
+		left: -200%;
+	}
+}
+
+@keyframes papaa3{
+	0% {
+		height: 15%;
+		left: -200%;
+		bottom: -200%;
+	}
+	50% {
+		height: 15%;
+		left: 50%;
+		top: 0%;
+		transform: rotate(-45deg);
+	}
+	100%{
+		height: 15%;
+		left: 50%;
+		top: -200%;
+	}
+}
+
+@keyframes papaa4{
+	25% {
+		height: 15%;
+		left: 60%;
+		top: 0%;
+	}
+	50% {
+		height: 10%;
+		left: 45%;
+		top: 20%;
+		transform: rotate(-45deg) scaleX(-1);
+	}
+	75% {
+		height: 8%;
+		left: 35%;
+		top: 30%;
+	}
+	99% {
+		height: 1%;
+		left: 25%;
+		top: 45%;
+	}
+	100% {
+		height: 0%;
+		left: 25%;
+		top: 45%;
+	}
+}
+
+/* Estela de estrellas */
+/* Generico Estrellas */
+
+.estrellas {
+	position: absolute;
+	width: 0%;
+	bottom: 50%;
+	animation-name: estrellasarriba;
+	animation-duration: 3s;
+	animation-delay: 6.8s;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+	right: 0%;
+			opacity: 0.5;
+}
+.estrellas2 {
+	position: absolute;
+	width: 0%;
+	bottom: 5%;
+	animation-name: estrellasabajo;
+	animation-duration: 3s;
+	animation-delay: 3.5s;
+	animation-fill-mode: forwards;
+	overflow: hidden;
+}
+
+/* Animación Estrellas */
+
+@keyframes estrellasarriba{
+	0% {
+		width: 0%;
+		right: 0%;
+		opacity: 0.0;
+	}
+	100% {
+		width: 100%;
+		right: 0%;
+		opacity: 1.0;
+	}
+}
+
+@keyframes estrellasabajo{
+	0% {
+		width: 0%;
+		opacity: 0.0;
+	}
+	100% {
+		width: 100%;
+		opacity: 1.0;
+	}
+}
+
+
+
